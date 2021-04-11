@@ -1,4 +1,4 @@
-package com.d.multithreading.threadlocal.baeldung;
+package com.d.concurrency.threadlocal.baeldung;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
