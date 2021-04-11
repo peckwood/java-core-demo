@@ -17,4 +17,15 @@ class ThreadLocalIntegrationTest{
 
         Assertions.assertEquals(2, SharedMapWithUserContext.userContextPerUserId.size());
     }
+
+    @Test
+    void givenThreadThatStoresContextInThreadLocal_whenStartThread_thenShouldStoreContextInThreadLocal(){
+        ThreadLocalWithUserContext user1 = new ThreadLocalWithUserContext(1);
+        ThreadLocalWithUserContext user2 = new ThreadLocalWithUserContext(2);
+
+        new Thread(user1).start();
+        new Thread(user2).start();
+
+
+    }
 }
